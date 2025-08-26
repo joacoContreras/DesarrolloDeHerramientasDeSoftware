@@ -1,31 +1,56 @@
 from datetime import datetime as dt
+
 data = {}
-file = open("C:\\Users\\cjoaq\\OneDrive\\Documentos\\GitHub\\DesarrolloDeHerramientasDeSoftware\\TP_1\\Data\\registro_temperatura365d_smn.txt", "r")
+path = r"C:\\Users\\cjoaq\\OneDrive\\Documentos\\GitHub\\DesarrolloDeHerramientasDeSoftware\\TP_1\\Data\\registro_temperatura365d_smn.txt"
 
 # Read dataset and load it into a dictionary grouped by station name
-for line in file:
-    parts = line.strip().split()
-    
-    if len(parts) < 4 or parts[0] == "Fecha" or parts[0].startswith("-"):
-        continue
-    
-    date = parts[0]
-    tmaxm = parts[1]
-    tmin = parts[2]
-    name = " ".join(parts[3:])  # Join all remaining parts as station name
-    
-    try:
-        date_obj = dt.strptime(date, "%d%m%Y").date()
-        tmaxm = float(tmaxm)
-        tmin = float(tmin)
-    except ValueError:
-        continue
+with open(path, "r", encoding="utf-8") as file:
+    for raw in file:
+        line = raw.strip()
+        if not line:
+            continue
+        parts = line.split()
+        if len(parts) < 2:
+            continue
+        # Saltar cabeceras y guiones
+        if parts[0].upper() in ("FECHA", "DATE") or parts[0].startswith("-"):
+            continue
 
-    if name not in data:
-        data[name] = {"DATE": [], "TMAX": [], "TMIN": []}
-    data[name]["DATE"].append(date_obj)
-    data[name]["TMAX"].append(tmaxm)
-    data[name]["TMIN"].append(tmin)
+        # Fecha
+        try:
+            date_obj = dt.strptime(parts[0], "%d%m%Y").date()
+        except ValueError:
+            # línea inválida
+            continue
+
+        idx = 1
+
+        # TMAX (opcional)
+        tmaxm = None
+        if idx < len(parts):
+            try:
+                tmaxm = float(parts[idx]); idx += 1
+            except ValueError:
+                tmaxm = None  # si no es número, asumimos que falta
+
+        # TMIN (opcional)
+        tmin = None
+        if idx < len(parts):
+            try:
+                tmin = float(parts[idx]); idx += 1
+            except ValueError:
+                tmin = None  # falta TMIN
+
+        # Nombre de estación: todo lo que queda
+        if idx >= len(parts):
+            # si no hay nombre, descartamos
+            continue
+        name = " ".join(parts[idx:]).strip()
+
+        rec = data.setdefault(name, {"DATE": [], "TMAX": [], "TMIN": []})
+        rec["DATE"].append(date_obj)
+        rec["TMAX"].append(tmaxm)
+        rec["TMIN"].append(tmin)
 
 file.close()
 
@@ -33,39 +58,40 @@ with open("Report.txt", "w") as f:
     # =============================
     # Report 1: max TMAX and min TMIN for each station in the last year
     # =============================
-    date_begin = "01012025"
-    date_end = "31122025"
-    date_begin = dt.strptime(date_begin, "%d%m%Y").date()
-    date_end = dt.strptime(date_end, "%d%m%Y").date()
-    
+    date_begin = dt.strptime("01012025", "%d%m%Y").date()
+date_end   = dt.strptime("31122025", "%d%m%Y").date()
+
+with open("Report.txt", "w", encoding="utf-8") as f:
     f.write(f"=== Max TMAX and Min TMIN registered between {date_begin} and {date_end} for each station ===\n")
-    f.write(f"{'STATION NAME':<40} {'DATE':<10} {'TMAX':>7} {'TMIN':>7}\n")
-    f.write(f"{'-'*40} {'-'*10} {'-'*7} {'-'*7}\n")
+    f.write(f"{'STATION NAME':<40} {'DATE MAX':<10} {'TMAX':>7} {'DATE MIN':<10} {'TMIN':>7}\n")
+    f.write(f"{'-'*40} {'-'*10} {'-'*7} {'-'*10} {'-'*7}\n")
 
     for station in sorted(data.keys()):
         values = data[station]
-        max_tmax = None
-        min_tmin = None
-        max_tmax_date = None
-        min_tmin_date = None
-        for i, date in enumerate(values["DATE"]):
-            if date_begin <= date <= date_end:
-                tmax = values["TMAX"][i]
-                tmin = values["TMIN"][i]
-                if tmax is not None:
-                    if max_tmax is None or tmax > max_tmax:
-                        max_tmax = tmax
-                        max_tmax_date = date
-                if tmin is not None:
-                    if min_tmin is None or tmin < min_tmin:
-                        min_tmin = tmin
-                        min_tmin_date = date
-                        
-        date_str = max_tmax_date.strftime('%d/%m/%Y') if max_tmax_date else (min_tmin_date.strftime('%d/%m/%Y') if min_tmin_date else "N/A")
-        tmax_str = f"{max_tmax:>7.1f}" if max_tmax is not None else "   N/A"
-        tmin_str = f"{min_tmin:>7.1f}" if min_tmin is not None else "   N/A"
-        f.write(f"{station:<40} {date_str:<10} {tmax_str} {tmin_str}\n")
-    
+        max_tmax, max_tmax_date = None, None
+        min_tmin, min_tmin_date = None, None
+
+        for i, d in enumerate(values["DATE"]):
+            if not (date_begin <= d <= date_end):
+                continue
+            tmax = values["TMAX"][i]
+            tmin = values["TMIN"][i]
+
+            if tmax is not None and (max_tmax is None or tmax > max_tmax):
+                max_tmax = tmax
+                max_tmax_date = d
+
+            if tmin is not None and (min_tmin is None or tmin < min_tmin):
+                min_tmin = tmin
+                min_tmin_date = d
+
+        max_date_str = max_tmax_date.strftime("%d/%m/%Y") if max_tmax_date else "N/A"
+        min_date_str = min_tmin_date.strftime("%d/%m/%Y") if min_tmin_date else "N/A"
+        tmax_str = f"{max_tmax:7.1f}" if max_tmax is not None else f"{'N/A':>7}"
+        tmin_str = f"{min_tmin:7.1f}" if min_tmin is not None else f"{'N/A':>7}"
+
+        f.write(f"{station:<40} {max_date_str:<10} {tmax_str} {min_date_str:<10} {tmin_str}\n")
+
     # ===================================================  
     # Report 2: Station with the highest temperature range
     # ===================================================

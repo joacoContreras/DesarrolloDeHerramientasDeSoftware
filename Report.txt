@@ -1,121 +1,121 @@
 === Max TMAX and Min TMIN registered between 2025-01-01 and 2025-12-31 for each station ===
-STATION NAME                             DATE          TMAX    TMIN
----------------------------------------- ---------- ------- -------
-AEROPARQUE AERO                          10/02/2025    36.3     1.5
-AZUL AERO                                10/02/2025    38.1    -7.7
-BAHIA BLANCA AERO                        23/01/2025    39.3    -6.6
-BARILOCHE AERO                           29/01/2025    32.3   -13.9
-BASE BELGRANO II                         20/01/2025     5.6   -36.1
-BASE CARLINI (EX JUBANY)                 09/04/2025     8.7   -11.5
-BASE ESPERANZA                           01/01/2025    14.7   -21.6
-BASE MARAMBIO                            22/01/2025    14.1   -27.7
-BASE ORCADAS                             23/01/2025     9.0   -23.5
-BASE SAN MARTIN                          02/01/2025     8.7   -21.2
-BENITO JUAREZ                            22/02/2025    37.0    -7.3
-BERNARDO DE IRIGOYEN AERO                03/03/2025    33.1    -1.2
-BOLIVAR AERO                             10/02/2025    38.5    -8.0
-BUENOS AIRES OBSERVATORIO                10/02/2025    38.5    -1.9
-CAMPO DE MAYO AERO                       10/02/2025    38.0    -6.7
-CATAMARCA AERO                           09/02/2025    42.7    -6.2
-CERES AERO                               19/03/2025    33.6    -4.5
-CHAMICAL AERO                            01/08/2025    28.0    -3.6
-CHAPELCO AERO                            29/01/2025    34.6   -15.0
-CHEPES                                   09/02/2025    41.5    -6.6
-CHILECITO AERO                           06/03/2025    37.0    -5.0
-COMODORO RIVADAVIA AERO                  12/01/2025    35.6    -6.3
-CONCORDIA AERO                           10/02/2025    41.8    -5.2
-CORDOBA AERO                             24/02/2025    39.5    -8.1
-CORDOBA OBSERVATORIO                     24/02/2025    42.2    -3.4
-CORONEL SUAREZ AERO                      22/02/2025    36.4   -10.3
-CORRIENTES AERO                          04/03/2025    41.4    -0.5
-DOLORES AERO                             27/03/2025    28.8    -3.9
-EL BOLSON AERO                           30/01/2025    35.6   -10.5
-EL CALAFATE AERO                         24/03/2025    22.4   -14.1
-EL PALOMAR AERO                          03/02/2025    38.0    -7.4
-ESQUEL AERO                              30/01/2025    31.2   -18.2
-EZEIZA AERO                              10/02/2025    38.5    -4.6
-FORMOSA AERO                             04/03/2025    41.5     1.4
-GENERAL PICO AERO                        14/01/2025    39.6    -8.0
-GOBERNADOR GREGORES AERO                 25/03/2025    29.0   -14.0
-GUALEGUAYCHU AERO                        10/02/2025    39.3    -6.4
-IGUAZU AERO                              02/03/2025    37.2    -1.2
-ITUZAINGO                                11/02/2025    40.5     2.0
-JACHAL                                   08/02/2025    39.6    -8.1
-JUJUY AERO                               04/02/2025    37.6    -2.8
-JUJUY U N                                05/02/2025    34.7    -1.5
-JUNIN AERO                               15/01/2025    37.6    -8.0
-LA PLATA AERO                            03/02/2025    38.1    -5.2
-LA QUIACA OBSERVATORIO                   24/02/2025    25.2   -10.2
-LA RIOJA AERO                            10/02/2025    45.0    -5.0
-LABOULAYE AERO                           23/02/2025    38.5    -7.1
-LAS FLORES                               10/02/2025    39.5    -3.6
-LAS LOMITAS                              06/02/2025    42.5     0.0
-MALARGUE AERO                            10/02/2025    36.6   -16.0
-MAQUINCHAO                               30/01/2025    39.0   -19.2
-MAR DEL PLATA AERO                       10/02/2025    39.9    -6.3
-MARCOS JUAREZ AERO                       08/02/2025    39.2    -8.0
-MENDOZA AERO                             26/02/2025    35.0    -6.7
-MERCEDES AERO (CTES)                     11/02/2025    41.0    -1.8
-MERLO AERO                               N/A           N/A    N/A
-METAN                                    01/03/2025    38.0    -0.4
-MONTE CASEROS AERO                       04/03/2025    40.6    -1.9
-MORON AERO                               10/02/2025    38.0    -4.9
-NEUQUEN AERO                             30/01/2025    42.1   -11.0
-NUEVE DE JULIO                           22/01/2025    38.2    -3.8
-OBERA                                    07/03/2025    37.0    -1.5
-OLAVARRIA AERO                           21/02/2025    37.7    -6.7
-ORAN AERO                                05/02/2025    41.0     1.9
-PARANA AERO                              05/03/2025    36.7    -3.5
-PASO DE INDIOS                           22/02/2025    28.4   -12.4
-PASO DE LOS LIBRES AERO                  11/02/2025    41.7    -0.6
-PEHUAJO AERO                             15/01/2025    38.7    -5.1
-PERITO MORENO AERO                       03/01/2025    26.6   -14.6
-PIGUE AERO                               22/02/2025    36.5    -6.8
-PILAR OBSERVATORIO                       08/02/2025    41.2    -4.0
-POSADAS AERO                             03/03/2025    39.0     1.2
-PRESIDENCIA ROQUE SAENZ PEÑA AERO        05/02/2025    42.6    -4.5
-PUERTO DESEADO AERO                      12/01/2025    34.5   -11.5
-PUERTO MADRYN AERO                       12/01/2025    42.3   -11.6
-PUNTA INDIO B.A.                         03/02/2025    35.0    -3.5
-RAFAELA AERO                             09/02/2025    42.0    -4.2
-RECONQUISTA AERO                         11/02/2025    43.7    -1.4
-RESISTENCIA AERO                         03/03/2025    43.3    -2.2
-RIO CUARTO AERO                          17/05/2025    27.6    -7.2
-RIO GALLEGOS AERO                        12/01/2025    27.6   -13.6
-RIO GRANDE B.A.                          05/01/2025    21.6    -8.8
-RIVADAVIA                                04/02/2025    46.5     1.3
-ROSARIO AERO                             10/02/2025    39.5    -6.8
-SALTA AERO                               05/02/2025    34.4    -5.3
-SAN ANTONIO OESTE AERO                   18/07/2025    24.6   -10.4
-SAN FERNANDO AERO                        10/02/2025    37.9    -5.1
-SAN JUAN AERO                            10/02/2025    44.0    -8.0
-SAN JULIAN AERO                          05/01/2025    32.7   -11.3
-SAN LUIS AERO                            10/02/2025    40.7    -6.7
-SAN MARTIN (MZA)                         10/02/2025    42.7    -5.9
-SAN RAFAEL AERO                          22/02/2025    39.5    -8.4
-SANTA CRUZ AERO                          29/01/2025    29.8    -9.3
-SANTA ROSA AERO                          22/02/2025    41.4    -7.3
-SANTA ROSA DE CONLARA AERO               22/02/2025    40.6   -11.8
-SANTIAGO DEL ESTERO AERO                 05/02/2025    44.2    -3.5
-SAUCE VIEJO AERO                         10/02/2025    40.9    -7.0
-SUNCHALES AERO                           24/02/2025    42.5    -4.7
-TANDIL AERO                              10/02/2025    37.7    -8.1
-TARTAGAL AERO                            25/02/2025    39.1    -1.0
-TERMAS DE RIO HONDO AERO                 05/02/2025    42.7    -3.0
-TINOGASTA                                10/02/2025    41.5    -8.5
-TRELEW AERO                              12/01/2025    43.6   -13.2
-TRENQUE LAUQUEN                          15/01/2025    38.5    -5.1
-TRES ARROYOS                             22/02/2025    36.8    -5.0
-TUCUMAN AERO                             10/02/2025    41.7    -0.6
-USHUAIA AERO                             06/04/2025    19.1    -4.3
-USPALLATA                                10/02/2025    36.7   -11.2
-VENADO TUERTO AERO                       10/02/2025    37.2    -8.0
-VICTORICA                                22/02/2025    41.1   -11.0
-VIEDMA AERO                              20/03/2025    36.6    -5.0
-VILLA DE MARIA DEL RIO SECO              24/02/2025    42.2    -8.4
-VILLA DOLORES AERO                       09/02/2025    40.8    -8.4
-VILLA GESELL AERO                        10/02/2025    39.1    -6.4
-VILLA REYNOLDS AERO                      10/02/2025    41.0   -12.7
+STATION NAME                             DATE MAX      TMAX DATE MIN      TMIN
+---------------------------------------- ---------- ------- ---------- -------
+AEROPARQUE AERO                          10/02/2025    36.3 02/07/2025     1.5
+AZUL AERO                                10/02/2025    38.1 01/07/2025    -7.7
+BAHIA BLANCA AERO                        23/01/2025    39.3 01/07/2025    -6.6
+BARILOCHE AERO                           29/01/2025    32.3 30/06/2025   -13.9
+BASE BELGRANO II                         20/01/2025     5.6 08/06/2025   -36.1
+BASE CARLINI (EX JUBANY)                 09/04/2025     8.7 13/08/2025   -11.5
+BASE ESPERANZA                           01/01/2025    14.7 24/07/2025   -21.6
+BASE MARAMBIO                            22/01/2025    14.1 12/08/2025   -27.7
+BASE ORCADAS                             23/01/2025     9.0 04/08/2025   -23.5
+BASE SAN MARTIN                          02/01/2025     8.7 07/08/2025   -21.2
+BENITO JUAREZ                            22/02/2025    37.0 01/07/2025    -7.3
+BERNARDO DE IRIGOYEN AERO                03/03/2025    33.1 01/07/2025    -1.2
+BOLIVAR AERO                             10/02/2025    38.5 01/07/2025    -8.0
+BUENOS AIRES OBSERVATORIO                10/02/2025    38.5 02/07/2025    -1.9
+CAMPO DE MAYO AERO                       10/02/2025    38.0 02/07/2025    -6.7
+CATAMARCA AERO                           09/02/2025    42.7 01/07/2025    -6.2
+CERES AERO                               19/03/2025    33.6 02/07/2025    -4.5
+CHAMICAL AERO                            01/08/2025    28.0 24/06/2025    -3.6
+CHAPELCO AERO                            29/01/2025    34.6 30/06/2025   -15.0
+CHEPES                                   09/02/2025    41.5 30/06/2025    -6.6
+CHILECITO AERO                           06/03/2025    37.0 02/07/2025    -5.0
+COMODORO RIVADAVIA AERO                  12/01/2025    35.6 26/07/2025    -6.3
+CONCORDIA AERO                           10/02/2025    41.8 01/07/2025    -5.2
+CORDOBA AERO                             24/02/2025    39.5 01/07/2025    -8.1
+CORDOBA OBSERVATORIO                     24/02/2025    42.2 30/06/2025    -3.4
+CORONEL SUAREZ AERO                      22/02/2025    36.4 01/07/2025   -10.3
+CORRIENTES AERO                          04/03/2025    41.4 02/07/2025    -0.5
+DOLORES AERO                             27/03/2025    28.8 02/07/2025    -3.9
+EL BOLSON AERO                           30/01/2025    35.6 30/06/2025   -10.5
+EL CALAFATE AERO                         24/03/2025    22.4 29/06/2025   -14.1
+EL PALOMAR AERO                          03/02/2025    38.0 02/07/2025    -7.4
+ESQUEL AERO                              30/01/2025    31.2 30/06/2025   -18.2
+EZEIZA AERO                              10/02/2025    38.5 01/07/2025    -4.6
+FORMOSA AERO                             04/03/2025    41.5 01/07/2025     1.4
+GENERAL PICO AERO                        14/01/2025    39.6 30/06/2025    -8.0
+GOBERNADOR GREGORES AERO                 25/03/2025    29.0 29/06/2025   -14.0
+GUALEGUAYCHU AERO                        10/02/2025    39.3 02/07/2025    -6.4
+IGUAZU AERO                              02/03/2025    37.2 24/06/2025    -1.2
+ITUZAINGO                                11/02/2025    40.5 02/07/2025     2.0
+JACHAL                                   08/02/2025    39.6 01/07/2025    -8.1
+JUJUY AERO                               04/02/2025    37.6 24/06/2025    -2.8
+JUJUY U N                                05/02/2025    34.7 03/07/2025    -1.5
+JUNIN AERO                               15/01/2025    37.6 01/07/2025    -8.0
+LA PLATA AERO                            03/02/2025    38.1 02/07/2025    -5.2
+LA QUIACA OBSERVATORIO                   24/02/2025    25.2 30/06/2025   -10.2
+LA RIOJA AERO                            10/02/2025    45.0 24/06/2025    -5.0
+LABOULAYE AERO                           23/02/2025    38.5 01/07/2025    -7.1
+LAS FLORES                               10/02/2025    39.5 01/07/2025    -3.6
+LAS LOMITAS                              06/02/2025    42.5 24/06/2025     0.0
+MALARGUE AERO                            10/02/2025    36.6 30/06/2025   -16.0
+MAQUINCHAO                               30/01/2025    39.0 30/06/2025   -19.2
+MAR DEL PLATA AERO                       10/02/2025    39.9 02/07/2025    -6.3
+MARCOS JUAREZ AERO                       08/02/2025    39.2 01/07/2025    -8.0
+MENDOZA AERO                             26/02/2025    35.0 30/06/2025    -6.7
+MERCEDES AERO (CTES)                     11/02/2025    41.0 02/07/2025    -1.8
+MERLO AERO                               N/A           N/A N/A           N/A
+METAN                                    01/03/2025    38.0 30/06/2025    -0.4
+MONTE CASEROS AERO                       04/03/2025    40.6 01/07/2025    -1.9
+MORON AERO                               10/02/2025    38.0 02/07/2025    -4.9
+NEUQUEN AERO                             30/01/2025    42.1 30/06/2025   -11.0
+NUEVE DE JULIO                           22/01/2025    38.2 01/07/2025    -3.8
+OBERA                                    07/03/2025    37.0 01/07/2025    -1.5
+OLAVARRIA AERO                           21/02/2025    37.7 01/07/2025    -6.7
+ORAN AERO                                05/02/2025    41.0 24/06/2025     1.9
+PARANA AERO                              05/03/2025    36.7 01/07/2025    -3.5
+PASO DE INDIOS                           22/02/2025    28.4 26/07/2025   -12.4
+PASO DE LOS LIBRES AERO                  11/02/2025    41.7 01/07/2025    -0.6
+PEHUAJO AERO                             15/01/2025    38.7 01/07/2025    -5.1
+PERITO MORENO AERO                       03/01/2025    26.6 30/06/2025   -14.6
+PIGUE AERO                               22/02/2025    36.5 01/07/2025    -6.8
+PILAR OBSERVATORIO                       08/02/2025    41.2 30/06/2025    -4.0
+POSADAS AERO                             03/03/2025    39.0 02/07/2025     1.2
+PRESIDENCIA ROQUE SAENZ PEÑA AERO        05/02/2025    42.6 03/07/2025    -4.5
+PUERTO DESEADO AERO                      12/01/2025    34.5 30/06/2025   -11.5
+PUERTO MADRYN AERO                       12/01/2025    42.3 01/07/2025   -11.6
+PUNTA INDIO B.A.                         03/02/2025    35.0 01/07/2025    -3.5
+RAFAELA AERO                             09/02/2025    42.0 01/07/2025    -4.2
+RECONQUISTA AERO                         11/02/2025    43.7 02/07/2025    -1.4
+RESISTENCIA AERO                         03/03/2025    43.3 02/07/2025    -2.2
+RIO CUARTO AERO                          17/05/2025    27.6 30/06/2025    -7.2
+RIO GALLEGOS AERO                        12/01/2025    27.6 29/06/2025   -13.6
+RIO GRANDE B.A.                          05/01/2025    21.6 29/06/2025    -8.8
+RIVADAVIA                                04/02/2025    46.5 03/07/2025     1.3
+ROSARIO AERO                             10/02/2025    39.5 01/07/2025    -6.8
+SALTA AERO                               05/02/2025    34.4 03/07/2025    -5.3
+SAN ANTONIO OESTE AERO                   18/07/2025    24.6 30/06/2025   -10.4
+SAN FERNANDO AERO                        10/02/2025    37.9 02/07/2025    -5.1
+SAN JUAN AERO                            10/02/2025    44.0 01/07/2025    -8.0
+SAN JULIAN AERO                          05/01/2025    32.7 30/06/2025   -11.3
+SAN LUIS AERO                            10/02/2025    40.7 30/06/2025    -6.7
+SAN MARTIN (MZA)                         10/02/2025    42.7 30/06/2025    -5.9
+SAN RAFAEL AERO                          22/02/2025    39.5 30/06/2025    -8.4
+SANTA CRUZ AERO                          29/01/2025    29.8 07/07/2025    -9.3
+SANTA ROSA AERO                          22/02/2025    41.4 30/06/2025    -7.3
+SANTA ROSA DE CONLARA AERO               22/02/2025    40.6 30/06/2025   -11.8
+SANTIAGO DEL ESTERO AERO                 05/02/2025    44.2 03/07/2025    -3.5
+SAUCE VIEJO AERO                         10/02/2025    40.9 01/07/2025    -7.0
+SUNCHALES AERO                           24/02/2025    42.5 01/07/2025    -4.7
+TANDIL AERO                              10/02/2025    37.7 02/07/2025    -8.1
+TARTAGAL AERO                            25/02/2025    39.1 24/06/2025    -1.0
+TERMAS DE RIO HONDO AERO                 05/02/2025    42.7 24/06/2025    -3.0
+TINOGASTA                                10/02/2025    41.5 01/07/2025    -8.5
+TRELEW AERO                              12/01/2025    43.6 01/07/2025   -13.2
+TRENQUE LAUQUEN                          15/01/2025    38.5 01/07/2025    -5.1
+TRES ARROYOS                             22/02/2025    36.8 01/07/2025    -5.0
+TUCUMAN AERO                             10/02/2025    41.7 02/07/2025    -0.6
+USHUAIA AERO                             06/04/2025    19.1 29/06/2025    -4.3
+USPALLATA                                10/02/2025    36.7 30/06/2025   -11.2
+VENADO TUERTO AERO                       10/02/2025    37.2 01/07/2025    -8.0
+VICTORICA                                22/02/2025    41.1 30/06/2025   -11.0
+VIEDMA AERO                              20/03/2025    36.6 23/07/2025    -5.0
+VILLA DE MARIA DEL RIO SECO              24/02/2025    42.2 01/07/2025    -8.4
+VILLA DOLORES AERO                       09/02/2025    40.8 30/06/2025    -8.4
+VILLA GESELL AERO                        10/02/2025    39.1 02/07/2025    -6.4
+VILLA REYNOLDS AERO                      10/02/2025    41.0 30/06/2025   -12.7
 
 === Station with the highest temperature range in the same day ===
 STATION NAME                             DATE         RANGE
