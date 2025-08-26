@@ -4,7 +4,7 @@ data = {}
 path = r"C:\\Users\\cjoaq\\OneDrive\\Documentos\\GitHub\\DesarrolloDeHerramientasDeSoftware\\TP_1\\Data\\registro_temperatura365d_smn.txt"
 
 # Read dataset and load it into a dictionary grouped by station name
-with open(path, "r", encoding="utf-8") as file:
+with open(path, "r") as file:
     for raw in file:
         line = raw.strip()
         if not line:
@@ -12,38 +12,31 @@ with open(path, "r", encoding="utf-8") as file:
         parts = line.split()
         if len(parts) < 2:
             continue
-        # Saltar cabeceras y guiones
+        
         if parts[0].upper() in ("FECHA", "DATE") or parts[0].startswith("-"):
             continue
 
-        # Fecha
         try:
             date_obj = dt.strptime(parts[0], "%d%m%Y").date()
         except ValueError:
-            # línea inválida
             continue
 
         idx = 1
-
-        # TMAX (opcional)
         tmaxm = None
         if idx < len(parts):
             try:
                 tmaxm = float(parts[idx]); idx += 1
             except ValueError:
-                tmaxm = None  # si no es número, asumimos que falta
+                tmaxm = None  
 
-        # TMIN (opcional)
         tmin = None
         if idx < len(parts):
             try:
                 tmin = float(parts[idx]); idx += 1
             except ValueError:
-                tmin = None  # falta TMIN
+                tmin = None  
 
-        # Nombre de estación: todo lo que queda
         if idx >= len(parts):
-            # si no hay nombre, descartamos
             continue
         name = " ".join(parts[idx:]).strip()
 
