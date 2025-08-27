@@ -44,7 +44,11 @@ with open(path, "r") as file:
         rec["DATE"].append(date_obj)
         rec["TMAX"].append(tmaxm)
         rec["TMIN"].append(tmin)
-
+    # Build a sorted list of all unique dates in the dataset
+    all_dates = set()
+    for station in data:
+        all_dates.update(data[station]["DATE"])
+    all_dates = sorted(all_dates)
 file.close()
 
 with open("Report.txt", "w") as f:
@@ -150,23 +154,22 @@ with open("Report.txt", "w", encoding="utf-8") as f:
     # ===================================================
     # Report 4: Maximum temperature difference between two stations in the same day
     # ===================================================
-
     f.write("\n=== Maximum temperature difference between two stations in the same day ===\n")
     f.write(f"{'DATE':<10} {'TMAX':>7} {'STATION MAX':<30} {'TMIN':>7} {'STATION MIN':<30} {'DIFF':>7}\n")
     f.write(f"{'-'*10} {'-'*7} {'-'*30} {'-'*7} {'-'*30} {'-'*7}\n")
 
-    all_dates = set()
-    for station in data:
-        for date in data[station]["DATE"]:
-            if date is not None:
-                all_dates.add(date)
-    all_dates = sorted(all_dates)
+    max_diff = None
+    max_date = None
+    max_tmax = None
+    max_tmax_station = None
+    min_tmin = None
+    min_tmin_station = None
 
     for date in all_dates:
-        max_tmax = None
-        max_tmax_station = None
-        min_tmin = None
-        min_tmin_station = None
+        day_max_tmax = None
+        day_max_tmax_station = None
+        day_min_tmin = None
+        day_min_tmin_station = None
         for station in data:
             values = data[station]
             for i, d in enumerate(values["DATE"]):
@@ -174,35 +177,43 @@ with open("Report.txt", "w", encoding="utf-8") as f:
                     tmax = values["TMAX"][i]
                     tmin = values["TMIN"][i]
                     if tmax is not None:
-                        if max_tmax is None or tmax > max_tmax:
-                            max_tmax = tmax
-                            max_tmax_station = station
+                        if day_max_tmax is None or tmax > day_max_tmax:
+                            day_max_tmax = tmax
+                            day_max_tmax_station = station
                     if tmin is not None:
-                        if min_tmin is None or tmin < min_tmin:
-                            min_tmin = tmin
-                            min_tmin_station = station
-        if max_tmax is not None and min_tmin is not None:
-            diff = max_tmax - min_tmin
-            f.write(f"{date.strftime('%d/%m/%Y'):<10} {max_tmax:>7.1f} {max_tmax_station:<30} {min_tmin:>7.1f} {min_tmin_station:<30} {diff:>7.1f}\n")
-        else:
-            f.write(f"{date.strftime('%d/%m/%Y'):<10} {'N/A':>7} {'N/A':<30} {'N/A':>7} {'N/A':<30} {'N/A':>7}\n")
-            
+                        if day_min_tmin is None or tmin < day_min_tmin:
+                            day_min_tmin = tmin
+                            day_min_tmin_station = station
+        if day_max_tmax is not None and day_min_tmin is not None:
+            diff = day_max_tmax - day_min_tmin
+            if max_diff is None or diff > max_diff:
+                max_diff = diff
+                max_date = date
+                max_tmax = day_max_tmax
+                max_tmax_station = day_max_tmax_station
+                min_tmin = day_min_tmin
+                min_tmin_station = day_min_tmin_station
+
+    if max_diff is not None:
+        f.write(f"{max_date.strftime('%d/%m/%Y'):<10} {max_tmax:>7.1f} {max_tmax_station:<30} {min_tmin:>7.1f} {min_tmin_station:<30} {max_diff:>7.1f}\n")
+    else:
+        f.write(f"{'N/A':<10} {'N/A':>7} {'N/A':<30} {'N/A':>7} {'N/A':<30} {'N/A':>7}\n")
     # ===================================================
     # Report 5: Minimum temperature difference between two stations in the same day
     # ===================================================
-
     f.write("\n=== Minimum temperature difference between two stations in the same day ===\n")
     f.write(f"{'DATE':<10} {'TMAX':>7} {'STATION MAX':<30} {'TMIN':>7} {'STATION MIN':<30} {'DIFF':>7}\n")
     f.write(f"{'-'*10} {'-'*7} {'-'*30} {'-'*7} {'-'*30} {'-'*7}\n")
 
+    min_diff = None
+    min_date = None
+    min_tmax = None
+    min_tmax_station = None
+    min_tmin = None
+    min_tmin_station = None
+
     for date in all_dates:
-        min_diff = None
-        min_tmax = None
-        min_tmax_station = None
-        min_tmin = None
-        min_tmin_station = None
         stations_for_date = []
-        
         for station in data:
             values = data[station]
             for i, d in enumerate(values["DATE"]):
@@ -211,18 +222,19 @@ with open("Report.txt", "w", encoding="utf-8") as f:
                     tmin = values["TMIN"][i]
                     if tmax is not None and tmin is not None:
                         stations_for_date.append((station, tmax, tmin))
-                    
+        # Compare all pairs for this date
         for s1, tmax1, _ in stations_for_date:
             for s2, _, tmin2 in stations_for_date:
                 diff = tmax1 - tmin2
                 if min_diff is None or diff < min_diff:
                     min_diff = diff
+                    min_date = date
                     min_tmax = tmax1
                     min_tmax_station = s1
                     min_tmin = tmin2
                     min_tmin_station = s2
 
-        if min_diff is not None:
-            f.write(f"{date.strftime('%d/%m/%Y'):<10} {min_tmax:>7.1f} {min_tmax_station:<30} {min_tmin:>7.1f} {min_tmin_station:<30} {min_diff:>7.1f}\n")
-        else:
-            f.write(f"{date.strftime('%d/%m/%Y'):<10} {'N/A':>7} {'N/A':<30} {'N/A':>7} {'N/A':<30} {'N/A':>7}\n")
+    if min_diff is not None:
+        f.write(f"{min_date.strftime('%d/%m/%Y'):<10} {min_tmax:>7.1f} {min_tmax_station:<30} {min_tmin:>7.1f} {min_tmin_station:<30} {min_diff:>7.1f}\n")
+    else:
+        f.write(f"{'N/A':<10} {'N/A':>7} {'N/A':<30} {'N/A':>7} {'N/A':<30} {'N/A':>7}\n")
